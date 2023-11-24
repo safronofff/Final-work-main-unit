@@ -31,22 +31,22 @@ switch (NumArray)
         break;
 }
 
-int lenNewArray = 0;
+int lenArray = 0;
 for (int i = 0; i <= array.Length - 1; i++)
 {
     if (array[i].Length <= 3)
-        lenNewArray++;
+        lenArray++;
 }
 
-string[] newArray = new string[lenNewArray];
-int idx = 0;
+string[] newArray = new string[lenArray];
+int x = 0;
 
 for (int i = 0; i <= array.Length - 1; i++)
 {
     if (array[i].Length <= 3)
     {
-        newArray[idx] = array[i];
-        idx++;
+        newArray[x] = array[i];
+        x++;
     }
 }
 
