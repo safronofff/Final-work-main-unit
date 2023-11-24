@@ -58,17 +58,17 @@ PrintArray(newArray);
 void Commands()
 {
     Console.WriteLine();
-    Console.WriteLine("СПИСОК КОМАНД:");
-    Console.WriteLine("1 – использовать массив: [“Hello”, “2”, “world”, “:-)”]");
-    Console.WriteLine("2 – использовать массив: [“1234”, “1567”, “-2”, “computer science”]");
-    Console.WriteLine("3 – использовать массив: [“Russia”, “Denmark”, “Kazan”]");
+    Console.WriteLine("Выбор массива:");
+    Console.WriteLine("1 массив: [“Hello”, “2”, “world”, “:-)”]");
+    Console.WriteLine("2 массив: [“1234”, “1567”, “-2”, “computer science”]");
+    Console.WriteLine("3 массив: [“Russia”, “Denmark”, “Kazan”]");
     Console.WriteLine();
 }
 
 // Функция ввода
-string ReadInput(string msg)
+string ReadInput(string arnum)
 {
-    Console.Write(msg);
+    Console.Write(arnum);
     return Console.ReadLine();
 }
 
