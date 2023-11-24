@@ -14,8 +14,8 @@
 Commands();
 string[] array = new string[] { };
 
-string fromUser = ReadInput("Введите команду: ");
-switch (fromUser)
+string NumArray = ReadInput("Введите номер массива: ");
+switch (NumArray)
 {
     case "1":
         array = new string[] { "Hello", "2", "world", ":-)" };
@@ -27,7 +27,7 @@ switch (fromUser)
         array = new string[] { "Russia", "Denmark", "Kazan" };
         break;
     default:
-        Console.WriteLine($"{fromUser} - Такой команды нет");
+        Console.WriteLine($"{NumArray} - Команда отсутствует");
         break;
 }
 
