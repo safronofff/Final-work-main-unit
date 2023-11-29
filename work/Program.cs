@@ -82,7 +82,3 @@ void PrintArray(string[] array)
 PrintArray(array);
 Console.Write("→ ");
 PrintArray(newArray);
-
-PrintArray(array);
-Console.Write("→ ");
-PrintArray(newArray);
