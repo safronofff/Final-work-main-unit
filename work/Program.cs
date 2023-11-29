@@ -50,11 +50,7 @@ for (int i = 0; i <= array.Length - 1; i++)
     }
 }
 
-PrintArray(array);
-Console.Write("→ ");
-PrintArray(newArray);
-
-// Функция: Вывод команд для работы с программой
+// Функция вывода команды для работы с программой
 void Commands()
 {
     Console.WriteLine();
@@ -65,14 +61,14 @@ void Commands()
     Console.WriteLine();
 }
 
-// Функция ввода
+// Функция ввода номера выбранного массива
 string ReadInput(string arnum)
 {
     Console.Write(arnum);
     return Console.ReadLine();
 }
 
-//  Функция вывода массива в терминал
+//  Функция вывода сформированного массива  в терминал
 void PrintArray(string[] array)
 {
     Console.Write("[ ");
@@ -82,3 +78,7 @@ void PrintArray(string[] array)
     }
     Console.Write("] ");
 }
+
+PrintArray(array);
+Console.Write("→ ");
+PrintArray(newArray);
