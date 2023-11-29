@@ -23,9 +23,122 @@
 
 ## Решение:
 
-1. Как показанно в блок-схеме ниже, мы задаем старому массиву длинну на каждый элемент не более трех символов и перезаписываем его в новый массив.
+1. Как показанно в коде, мы задаем выбор одного из предлагаемых массивов через конструкцию *switch/case*
 
-> ![block diagram-final work](block diagram-final work.png)
+```cs
+   Commands();
+string[] array = new string[] { };
 
-> ![Block-diagram](block diagram-final work.png)
- 
+string NumArray = ReadInput("Введите номер массива: ");
+switch (NumArray)
+{
+    case "1":
+        array = new string[] { "Hello", "2", "world", ":-)" };
+        break;
+    case "2":
+        array = new string[] { "1234", "1567", "-2", "computer science" };
+        break;
+    case "3":
+        array = new string[] { "Russia", "Denmark", "Kazan" };
+        break;
+    default:
+        Console.WriteLine($"{NumArray} - Команда отсутствует");
+        break;
+}
+
+```
+
+2. Как показанно в блок-схеме ниже, мы задаем выбранному массиву длинну на каждый элемент не более трех символов и перезаписываем его в новый массив.
+
+![Блок-схема программы](https://github.com/safronofff/Final-work-main-unit/blob/a3f3e7b83d994fca5ef346fa21fec8739f6f2957/block%20diagram-final%20work.png)
+
+```cs
+
+int lenArray = 0;
+for (int i = 0; i <= array.Length - 1; i++)
+{
+    if (array[i].Length <= 3)
+        lenArray++;
+}
+
+
+
+string[] newArray = new string[lenArray];
+int x = 0;
+
+for (int i = 0; i <= array.Length - 1; i++)
+{
+    if (array[i].Length <= 3)
+    {
+        newArray[x] = array[i];
+        x++;
+    }
+}
+
+```
+
+3. Далее мы используем функцию вывода команды для работы с программой
+
+```cs
+
+void Commands()
+{
+    Console.WriteLine();
+    Console.WriteLine("Выбор массива:");
+    Console.WriteLine("1 массив: [“Hello”, “2”, “world”, “:-)”]");
+    Console.WriteLine("2 массив: [“1234”, “1567”, “-2”, “computer science”]");
+    Console.WriteLine("3 массив: [“Russia”, “Denmark”, “Kazan”]");
+    Console.WriteLine();
+}
+
+```
+
+4. Далее используем функцию ввода номера выбранного массива
+
+```cs
+
+string ReadInput(string arnum)
+{
+    Console.Write(arnum);
+    return Console.ReadLine();
+}
+
+```
+
+5. Следом идет функция вывода сформированного массива  в терминал
+
+```cs
+
+void PrintArray(string[] array)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"“{array[i]}”, ");
+    }
+    Console.Write("] ");
+}
+
+```
+
+6. В конце следует печать результата в терминал
+
+```cs
+
+PrintArray(array);
+Console.Write("→ ");
+PrintArray(newArray);
+
+```
+
+Как мы видем на скриншоте, получается следующий результат вывода в терминал:
+
+![Результат работы программы](dotnet_run.png)
+
+Скриншоты комитов:
+
+![](commit_1.png)
+
+![](commit_2.png)
+
+![](commit_3.png)
